@@ -206,7 +206,7 @@ class _RecordingPageState extends State<RecordingPage>
       return Column(
         children: <Widget>[
           Expanded(
-            flex: 7,
+            flex: 8,
             child: _text != null
                 ? Container(
                     color: Colors.grey[300],
@@ -230,17 +230,21 @@ class _RecordingPageState extends State<RecordingPage>
             color: Colors.black,
             height: 2.0,
           ),
-          AnimatedBuilder(
-              animation: animationController,
-              builder: (BuildContext context, Widget child) {
-                return new Text(
-                  timerString,
-                  style: TextStyle(fontSize: 20.0),
-                );
-              }),
+          Padding(
+            padding: const EdgeInsets.only(top:15.0),
+            child: AnimatedBuilder(
+                animation: animationController,
+                builder: (BuildContext context, Widget child) {
+                  return new Text(
+                    timerString,
+                    style: TextStyle(fontSize: 22.0,color:Colors.red,),
+                  );
+                }),
+          ),
           Expanded(
             flex: 2,
             child: Container(
+              padding: EdgeInsets.only(bottom: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[

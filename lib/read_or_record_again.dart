@@ -193,14 +193,17 @@ class _ReadDocumentState extends State<ReadDocument>
               color: Colors.black,
               height: 2.0,
             ),
-            AnimatedBuilder(
-                animation: animationController,
-                builder: (BuildContext context, Widget child) {
-                  return new Text(
-                    timerString,
-                    style: TextStyle(fontSize: 20.0),
-                  );
-                }),
+            Padding(
+              padding: const EdgeInsets.only(top:15.0),
+              child: AnimatedBuilder(
+                  animation: animationController,
+                  builder: (BuildContext context, Widget child) {
+                    return new Text(
+                      timerString,
+                      style: TextStyle(fontSize: 20.0,color:Colors.red),
+                    );
+                  }),
+            ),
             Expanded(
                 flex: 2,
                 child: Container(
