@@ -61,4 +61,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     
 }
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.android.gms:play-services-location:15.0.0'
+    }
+}
 apply plugin: 'com.google.gms.google-services'

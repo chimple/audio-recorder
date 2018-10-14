@@ -18,6 +18,7 @@ class ReviewState extends State<Review> {
   DataStatus dataStatus = DataStatus.loading;
   @override
   void initState() {
+    firestore.enablePersistence(true);
     super.initState();
     _initBoard();
   }

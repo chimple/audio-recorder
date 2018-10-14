@@ -55,6 +55,7 @@ class _RecordingPageState extends State<RecordingPage>
   @override
   initState() {
     _initBoard();
+    firestore.enablePersistence(true);
     super.initState();
   }
 
