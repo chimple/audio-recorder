@@ -86,11 +86,14 @@ class ReviewState extends State<Review> {
                             },
                             title: Text(
                               document['text'] ?? '<No message retrieved>',
-                              maxLines: 1,
+                              maxLines: 2,
                               softWrap: true,
+                              textAlign: TextAlign.justify,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
-                                fontSize: 20.0,
-                              ),
+                                  fontSize: 20.0, fontWeight: FontWeight.bold
+                                  // inherit: true,
+                                  ),
                             ),
                             subtitle:
                                 Text('Message ${index + 1} of $messageCount'),
