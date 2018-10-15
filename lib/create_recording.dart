@@ -231,13 +231,16 @@ class _RecordingPageState extends State<RecordingPage>
             height: 2.0,
           ),
           Padding(
-            padding: const EdgeInsets.only(top:15.0),
+            padding: const EdgeInsets.only(top: 15.0),
             child: AnimatedBuilder(
                 animation: animationController,
                 builder: (BuildContext context, Widget child) {
                   return new Text(
                     timerString,
-                    style: TextStyle(fontSize: 22.0,color:Colors.red,),
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      color: Colors.red,
+                    ),
                   );
                 }),
           ),
@@ -271,7 +274,7 @@ class _RecordingPageState extends State<RecordingPage>
                               borderRadius:
                                   BorderRadius.all(Radius.circular(35.0)),
                             ),
-                            onPressed: status != Status.record
+                            onPressed: status == Status.play
                                 ? () {
                                     recorder.stopAudio().then((k) {
                                       recorder.start();
@@ -288,8 +291,6 @@ class _RecordingPageState extends State<RecordingPage>
                                       isRecorded = false;
                                       isSent = true;
                                     });
-                                    switch (status) {
-                                    }
                                   }
                                 : null,
                             child: recIcon),

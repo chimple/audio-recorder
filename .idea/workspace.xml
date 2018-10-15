@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37c43e0b-53f0-46a7-ae43-3e08e8de60a7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/review.dart" afterPath="$PROJECT_DIR$/lib/review.dart" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/lib/create_recording.dart" afterPath="$PROJECT_DIR$/lib/create_recording.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -72,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="review.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/review.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="92" column="47" lean-forward="true" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+              <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -86,8 +96,10 @@
         <entry file="file://$PROJECT_DIR$/lib/create_recording.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="9765">
-              <caret line="474" column="22" lean-forward="false" selection-start-line="474" selection-start-column="22" selection-end-line="474" selection-end-column="22" />
-              <folding />
+              <caret line="475" column="22" lean-forward="false" selection-start-line="475" selection-start-column="22" selection-end-line="475" selection-end-column="22" />
+              <folding>
+                <marker date="1539593465372" expanded="true" signature="6682:6687" ph="(...)" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,6 +139,7 @@
         <option value="$PROJECT_DIR$/lib/create_recording.dart" />
         <option value="$PROJECT_DIR$/lib/read_or_record_again.dart" />
         <option value="$PROJECT_DIR$/lib/review.dart" />
+        <option value="$PROJECT_DIR$/android/build.gradle" />
       </list>
     </option>
   </component>
@@ -157,6 +170,11 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -310,7 +328,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22027028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44324324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3027027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -391,7 +409,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9954">
           <caret line="474" column="22" lean-forward="true" selection-start-line="474" selection-start-column="22" selection-end-line="474" selection-end-column="22" />
-          <folding />
+          <folding>
+            <marker date="1539593465372" expanded="true" signature="6682:6687" ph="(...)" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -454,8 +474,10 @@
     <entry file="file://$PROJECT_DIR$/lib/create_recording.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9765">
-          <caret line="474" column="22" lean-forward="false" selection-start-line="474" selection-start-column="22" selection-end-line="474" selection-end-column="22" />
-          <folding />
+          <caret line="475" column="22" lean-forward="false" selection-start-line="475" selection-start-column="22" selection-end-line="475" selection-end-column="22" />
+          <folding>
+            <marker date="1539593465372" expanded="true" signature="6682:6687" ph="(...)" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -482,7 +504,15 @@
     <entry file="file://$PROJECT_DIR$/lib/review.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="92" column="47" lean-forward="true" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+          <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding />
         </state>
       </provider>
