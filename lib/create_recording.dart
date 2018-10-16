@@ -206,19 +206,17 @@ class _RecordingPageState extends State<RecordingPage>
       return Column(
         children: <Widget>[
           Expanded(
-            flex: 8,
+            flex: 7,
             child: _text != null
                 ? Container(
                     color: Colors.grey[300],
                     child: Padding(
-                        padding: const EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.only(left: 15.0),
                         child: ListView(
                           children: <Widget>[
-                            Text.rich(
-                              TextSpan(
-                                text: _text,
-                                style: TextStyle(fontSize: 19.0, height: 1.50),
-                              ),
+                            Text(
+                              _text,
+                              style: TextStyle(fontSize: 19.0, height: 1.50),
                               textScaleFactor: 1.20,
                             ),
                           ],
