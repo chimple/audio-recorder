@@ -57,6 +57,7 @@ class _ReadDocumentState extends State<ReadDocument>
 
   DataStatus dataStatus;
   void _initData() async {
+    print('ssssssssssssssssssssssssss ${widget.document['audio_url']}');
     setState(() {
       isLoading = false;
     });
@@ -81,10 +82,8 @@ class _ReadDocumentState extends State<ReadDocument>
       isLoading = false;
       status = 'Sending..';
     });
-    final StorageReference firebaseStorageRef = FirebaseStorage.instance
-        .ref()
-        .child('${widget.document['audio_url']}.m4a');
-    // firebaseStorageRef.delete();
+    final StorageReference firebaseStorageRef =
+        FirebaseStorage.instance.ref().child('${widget.document['audio_url']}');
     String audioUrl = await firebaseStorageRef.getPath();
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),

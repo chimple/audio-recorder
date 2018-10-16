@@ -121,12 +121,11 @@ class _RecordingPageState extends State<RecordingPage>
       isSent = false;
     });
     final StorageReference firebaseStorageRef =
-        FirebaseStorage.instance.ref().child('${Uuid().v1()}.m4a');
+        FirebaseStorage.instance.ref().child('${Uuid().v1()}');
     String audioUrl = await firebaseStorageRef.getPath();
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),
     );
-
     Firestore.instance
         .collection('data')
         .document(documentSnapshot.documentID)
