@@ -84,7 +84,7 @@ class _ReadDocumentState extends State<ReadDocument>
     final StorageReference firebaseStorageRef = FirebaseStorage.instance
         .ref()
         .child('${widget.document['audio_url']}.m4a');
-    firebaseStorageRef.delete();
+    // firebaseStorageRef.delete();
     String audioUrl = await firebaseStorageRef.getPath();
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),
