@@ -115,7 +115,7 @@ class _ReadDocumentState extends State<ReadDocument>
     size: 35.0,
   );
   Icon recIcon = Icon(
-    Icons.record_voice_over,
+    Icons.mic,
     size: 35.0,
     color: Colors.white,
   );
@@ -266,7 +266,7 @@ class _ReadDocumentState extends State<ReadDocument>
                                       print('audio url $audioUrl');
                                       setState(() {
                                         recIcon = Icon(
-                                          Icons.record_voice_over,
+                                          Icons.mic,
                                           size: 35.0,
                                           color: Colors.white,
                                         );

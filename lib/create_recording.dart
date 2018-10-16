@@ -37,12 +37,12 @@ class _RecordingPageState extends State<RecordingPage>
   Status status = Status.record;
   DataStatus dataStatus;
   Icon icons = Icon(
-    Icons.record_voice_over,
+    Icons.mic,
     color: Colors.white,
     size: 35.0,
   );
   Icon recIcon = Icon(
-    Icons.record_voice_over,
+    Icons.mic,
     color: Colors.white,
     size: 35.0,
   );
