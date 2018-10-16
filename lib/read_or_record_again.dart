@@ -84,6 +84,7 @@ class _ReadDocumentState extends State<ReadDocument>
     final StorageReference firebaseStorageRef = FirebaseStorage.instance
         .ref()
         .child('${widget.document['audio_url']}.m4a');
+    firebaseStorageRef.delete();
     String audioUrl = await firebaseStorageRef.getPath();
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),
@@ -194,13 +195,13 @@ class _ReadDocumentState extends State<ReadDocument>
               height: 2.0,
             ),
             Padding(
-              padding: const EdgeInsets.only(top:15.0),
+              padding: const EdgeInsets.only(top: 15.0),
               child: AnimatedBuilder(
                   animation: animationController,
                   builder: (BuildContext context, Widget child) {
                     return new Text(
                       timerString,
-                      style: TextStyle(fontSize: 20.0,color:Colors.red),
+                      style: TextStyle(fontSize: 20.0, color: Colors.red),
                     );
                   }),
             ),
