@@ -3,17 +3,7 @@ import 'package:audiorecorder/review.dart';
 import 'package:flutter/material.dart';
 import 'create_recording.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  HomePageState createState() {
-    return new HomePageState();
-  }
-}
-
-@override
-initState() {}
-
-class HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
