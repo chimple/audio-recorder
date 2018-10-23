@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:demo/authentication.dart';
+import 'package:audiorecorder/authentication.dart';
 import 'package:flutter/material.dart';
-import 'package:demo/authentication.dart';
+import 'package:audiorecorder/authentication.dart';
 
 class SplashPage extends StatefulWidget {
   @override

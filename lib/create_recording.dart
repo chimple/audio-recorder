@@ -2,7 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:demo/recorder.dart';
+import 'package:audiorecorder/recorder.dart';
 import 'package:simple_permissions/simple_permissions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -55,7 +55,6 @@ class _RecordingPageState extends State<RecordingPage>
   @override
   initState() {
     _initBoard();
-    firestore.enablePersistence(true);
     super.initState();
   }
 
@@ -126,6 +125,7 @@ class _RecordingPageState extends State<RecordingPage>
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),
     );
+
     Firestore.instance
         .collection('data')
         .document(documentSnapshot.documentID)

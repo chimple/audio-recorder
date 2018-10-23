@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "1047013948138",
-    "firebase_url": "https://fir-be1df.firebaseio.com",
-    "project_id": "fir-be1df",
-    "storage_bucket": "fir-be1df.appspot.com"
+    "project_number": "293819734942",
+    "firebase_url": "https://audiorecorder-e7e87.firebaseio.com",
+    "project_id": "audiorecorder-e7e87",
+    "storage_bucket": "audiorecorder-e7e87.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1047013948138:android:2889d4d8c9335bd0",
+        "mobilesdk_app_id": "1:293819734942:android:aa7b22de103b19a3",
         "android_client_info": {
-          "package_name": "com.example.demo"
+          "package_name": "com.example.audiorecorder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1047013948138-ohvu8oftn1vffkc3q06eh4ckhj6n7qgi.apps.googleusercontent.com",
+          "client_id": "293819734942-6rksfq72puu86l227153gs3sj05lbgam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.audiorecorder",
+            "certificate_hash": "a679a046953abeb33680420861ec80d61214e95b"
+          }
+        },
+        {
+          "client_id": "293819734942-5aqastqn12a8b9u809cpu8lt6dl2mi32.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCggWeo5PYiCH_xU2CKuUS4Mfda6uqA5Ak"
+          "current_key": "AIzaSyBNo_1BsgbK7KAvszcQUokVm98O99LQdCQ"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293819734942-5aqastqn12a8b9u809cpu8lt6dl2mi32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

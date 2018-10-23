@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:demo/create_recording.dart';
-import 'package:demo/read_or_record_again.dart';
+import 'package:audiorecorder/create_recording.dart';
+import 'package:audiorecorder/read_or_record_again.dart';
 import 'package:flutter/material.dart';
 
 class Review extends StatefulWidget {
@@ -18,12 +18,12 @@ class ReviewState extends State<Review> {
   DataStatus dataStatus = DataStatus.loading;
   @override
   void initState() {
-    firestore.enablePersistence(true);
     super.initState();
     _initBoard();
   }
 
   void _initBoard() async {
+    await firestore.settings(timestampsInSnapshotsEnabled: true);
     var connectivityResult = await (new Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.mobile ||
         connectivityResult == ConnectivityResult.wifi) {
@@ -74,6 +74,7 @@ class ReviewState extends State<Review> {
                       ? Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListTile(
+                            enabled: true,
                             onTap: () {
                               print(' ${document.data.values}');
                               Navigator.push(

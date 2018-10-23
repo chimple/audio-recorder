@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:demo/create_recording.dart';
-import 'package:demo/recorder.dart';
+import 'package:audiorecorder/create_recording.dart';
+import 'package:audiorecorder/recorder.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,7 @@ class _ReadDocumentState extends State<ReadDocument>
 
   DataStatus dataStatus;
   void _initData() async {
-    print('ssssssssssssssssssssssssss ${widget.document['audio_url']}');
+    await firestore.settings(timestampsInSnapshotsEnabled: true);
     setState(() {
       isLoading = false;
     });
