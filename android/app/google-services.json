@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "293819734942",
-    "firebase_url": "https://audiorecorder-e7e87.firebaseio.com",
-    "project_id": "audiorecorder-e7e87",
-    "storage_bucket": "audiorecorder-e7e87.appspot.com"
+    "project_number": "109205757447",
+    "firebase_url": "https://audio-recorder-e3741.firebaseio.com",
+    "project_id": "audio-recorder-e3741",
+    "storage_bucket": "audio-recorder-e3741.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:293819734942:android:aa7b22de103b19a3",
+        "mobilesdk_app_id": "1:109205757447:android:b4514598960b9d7d",
         "android_client_info": {
-          "package_name": "com.example.audiorecorder"
+          "package_name": "org.sutara.audiorecorder"
         }
       },
       "oauth_client": [
         {
-          "client_id": "293819734942-6rksfq72puu86l227153gs3sj05lbgam.apps.googleusercontent.com",
+          "client_id": "109205757447-0oocvuppin4cmc6j35mnu385g864bggv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.audiorecorder",
-            "certificate_hash": "a679a046953abeb33680420861ec80d61214e95b"
+            "package_name": "org.sutara.audiorecorder",
+            "certificate_hash": "eda6a109946badae879f35d51c46f2795d36082a"
           }
         },
         {
-          "client_id": "293819734942-5aqastqn12a8b9u809cpu8lt6dl2mi32.apps.googleusercontent.com",
+          "client_id": "109205757447-2pql321msls9g6v3sd5un9k2f468qr4e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNo_1BsgbK7KAvszcQUokVm98O99LQdCQ"
+          "current_key": "AIzaSyBAPUI9zrq01JiaS79JftBOqGUn-5vlDjk"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "293819734942-5aqastqn12a8b9u809cpu8lt6dl2mi32.apps.googleusercontent.com",
+              "client_id": "109205757447-2pql321msls9g6v3sd5un9k2f468qr4e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
