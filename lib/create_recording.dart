@@ -87,6 +87,7 @@ class _RecordingPageState extends State<RecordingPage>
 
     dataStream =
         firestore.collection('data').snapshots().timeout(Duration(seconds: 2));
+    firestore.settings(timestampsInSnapshotsEnabled: true);
     dataStream.forEach((data) {
       for (int i = 0; i < data.documents.length; i++) {
         documentSnapshot = data.documents[i];
@@ -139,11 +140,19 @@ class _RecordingPageState extends State<RecordingPage>
       setState(() {
         loadingStatus = 'sent';
       });
-      new Future.delayed(Duration(seconds: 1), () {
-        setState(() {
-          dataStatus = DataStatus.loaded;
-        });
+      // new Future.delayed(Duration(seconds: 1), () {
+      setState(() {
+        dataStatus = DataStatus.loaded;
+        isSent = true;
+        icons = Icon(
+          Icons.mic,
+          color: Colors.white,
+          size: 35.0,
+        );
+        textIcon = 'Record';
+        status = Status.record;
       });
+      // });
     });
   }
 
