@@ -30,7 +30,7 @@ class _RecordingPageState extends State<RecordingPage>
   Firestore firestore = Firestore();
   Stream<QuerySnapshot> dataStream, savedStreamData;
   StorageUploadTask task;
-  String userId, loadingStatus = 'Please wait...', _text;
+  String userId, loadingStatus = 'Please wait...', _text,_title='';
   PageController controller = PageController();
   bool isRecorded = false, isSent = true, isLoading = false;
   int flag = 0, count = 0;
@@ -91,9 +91,10 @@ class _RecordingPageState extends State<RecordingPage>
     dataStream.forEach((data) {
       for (int i = 0; i < data.documents.length; i++) {
         documentSnapshot = data.documents[i];
-        if (documentSnapshot['status'] != 'translated') {
-          print('done');
+        var doc=documentSnapshot['status'];
+        if (documentSnapshot['status'] != 'translated' ||doc ==null) {
           _text = documentSnapshot['text'];
+          _title=documentSnapshot['title'];
           setState(() {
             dataStatus = DataStatus.loaded;
           });
@@ -121,7 +122,7 @@ class _RecordingPageState extends State<RecordingPage>
       isSent = false;
     });
     final StorageReference firebaseStorageRef =
-        FirebaseStorage.instance.ref().child('${Uuid().v1()}.m4a');
+        FirebaseStorage.instance.ref().child('${_title}.m4a');
     String audioUrl = await firebaseStorageRef.getPath();
     task = firebaseStorageRef.putFile(
       File(recorder.filePath),
@@ -131,7 +132,7 @@ class _RecordingPageState extends State<RecordingPage>
         .collection('data')
         .document(documentSnapshot.documentID)
         .setData({
-      'title': documentSnapshot['title'],
+      'title': _title+ '.m4a',
       'audio_url': audioUrl,
       'user_id': userId,
       'status': 'translated',
@@ -188,7 +189,8 @@ class _RecordingPageState extends State<RecordingPage>
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text('Record'),
+        title: Text(_title),
+        centerTitle: true,
       ),
       body: _buildUI(),
     );
