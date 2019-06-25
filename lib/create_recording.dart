@@ -141,7 +141,6 @@ class _RecordingPageState extends State<RecordingPage>
       setState(() {
         loadingStatus = 'sent';
       });
-      // new Future.delayed(Duration(seconds: 1), () {
       setState(() {
         dataStatus = DataStatus.loaded;
         isSent = true;
@@ -153,13 +152,12 @@ class _RecordingPageState extends State<RecordingPage>
         textIcon = 'Record';
         status = Status.record;
       });
-      // });
     });
   }
 
   @override
   didUpdateWidget(RecordingPage oldWidget) {
-    print('didUpdateWidget');
+    print('didUpdateWidget'); 
     super.didUpdateWidget(oldWidget);
   }
 
