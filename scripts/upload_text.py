@@ -16,17 +16,20 @@ db = firestore.client()
 
 wb = open_workbook(xlsx_file)
 
-values = []
+i = 0
 for sheet in wb.sheets():
-    for row in range(1, sheet.nrows):
-        col_names = sheet.row(0)
+    print(i)
+    i += 1
+    for row in range(2, sheet.nrows):
         col_value = {}
-        for name, col in zip(col_names, range(sheet.ncols)):
-            value = sheet.cell(row, col).value
+        text = sheet.cell(row, 0).value
+        title = sheet.cell(row, 1).value
+        if(title is not None and text is not '' and not text.startswith('You are free')):
             try:
-                value = str(value)
+                title = str(title)
+                text = str(text)
             except:
                 pass
-            col_value[name.value] = value
-        db.collection("data").add(col_value)
-        values.append(col_value)
+            col_value['text'] = text
+            col_value['title'] = title
+            db.collection("data").document(title).set(col_value)
